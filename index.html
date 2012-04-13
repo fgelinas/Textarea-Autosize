@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Textarea AutoSize by Francois Gelinas</title>
+    <script src="jquery-1.7.min.js"></script>
+    <script src="fg.textarea.autosize.js"></script>
+
+    <style type="text/css">
+        /* some styling for the page */
+        body { font-size: 14px;
+               font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+               width: 950px; margin: auto;
+        }
+        .box { border: 1px solid #888; padding: 15px; margin:12px; }
+        .code { margin: 6px; padding: 9px; display: inline-block; background-color: #fdf5ce; border: 1px solid #c77405; }
+        fieldset { padding: 0.5em 2em }
+        hr { margin: 0.5em 0; clear: both }
+        a { cursor: pointer; }
+        #requirements li { line-height: 1.6em; }
+    </style>
+
+</head>
+<body>
+    
+    <h1>JavaScript Textarea Autosize
+        <span style="color: #999; font-size:10px;">(By <a href="http://fgelinas.com">Fran&ccedil;ois G&eacute;linas</a>)</span>
+    </h1>
+    
+    <g:plusone callback='plusone_clicked'></g:plusone>
+    <span id="thankyou" style="display: none; font-size: 0.6em;" class="code">
+        Thanks !! (:
+    </span>
+
+    <p>
+        This script will attach to a textarea and resize it's height as the user type in so it always fits.
+    </p>
+    <p>
+       Download the script <a href="fg.textarea.autosize.js">here</a>, or get it on awesome GitHub <a href="https://github.com/fgelinas/Textarea-Autosize">there</a>.  Requires <a href="http://jquery.com">jQuery 1.7 or earlier</a>.
+    </p>
+    
+    
+    <h2>Demo : </h2>
+
+<textarea id="demo1" style="width: 300px">Unleash the typing !!!!
+</textarea>
+
+    <script>
+        $(document).ready(function() {
+            $('#demo1').textareaAutosize();
+
+            // for demo purpose, give focus
+            $('#demo1').focus();
+            // and move the cursor to the end
+            var val = $('#demo1').val();
+            $('#demo1').val('').val(val);
+
+        });
+
+    </script>
+    <h3>Usage :</h3>
+    <pre class="code">$('#demo1').textareaAutosize();</pre>
+
+
+</body>
+</html>
